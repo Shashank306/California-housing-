@@ -11,3 +11,11 @@ Create a new environment
 ```
 conda create -p venv python==3.7 -y
 ```
+
+## Install the libraries
+```
+pip install requirements.txt
+```
+The following link can be used to predict the price and to see the web app interface
+
+(http://127.0.0.1:5000)
