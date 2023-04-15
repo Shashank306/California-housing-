@@ -1,4 +1,4 @@
-### California Housing Prediction
+### California House Pricing Prediction
 
 ### Software And Tools Requirements
 
