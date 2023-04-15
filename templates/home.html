@@ -10,10 +10,90 @@
     <link href='https://fonts.ggogleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
     <link href='https://fonts.ggogleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.ggogleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
 </head>
 
+<style>
+    body,
+html {
+  height: 100%;
+}
+.img {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 110, 0.5),
+        rgb(1, 0, 87)
+      ),
+      url("https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 100% 100%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .title {
+    font-size: 50px;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
+  
+  .title:hover {
+    transition: 0.5s;
+    color: #d80286;
+  }
+
+  .form {
+    max-width: 270px;
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    line-height: 1.625;
+    margin: 8px auto;
+    padding-left: 16px;
+    z-index: 2;
+  }
+
+  input[type="number"],
+select option {
+  background-color: #d80286;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 36px;
+  overflow: hidden;
+}
+
+  .submit {
+    margin-top: 20px;
+    width: 76%;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(216, 2, 134);
+    border-radius: 0px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #d80286;
+    transition: ease-out 0.4s;
+  }
+  
+  .submit:hover {
+    box-shadow: inset 400px 0 0 0 #d80286;
+  }
+</style>
+
 <body>
+    <div class="img"></div>
     <div class="login">
+        
         <h1>California House Price Prediction</h1>
         <!-- Main Input For Recieving Query to our ML -->
         <form action="{{url_for('predict')}}" method="post">
